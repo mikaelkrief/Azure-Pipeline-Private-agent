@@ -1,0 +1,10 @@
+{
+
+    "client_id" : "<your service principal Application ID>",
+    "client_secret": "<your service principal secret key>",
+    "subscription_id": "<your subscription ID>",
+    "tenant_id": "<your service principal tenant ID>",
+    "resource_group": "<The resource group that contain the storage account>",
+    "storage_account": "<the name of the storage account>",
+    "location":"<the location of the storage account>"
+}

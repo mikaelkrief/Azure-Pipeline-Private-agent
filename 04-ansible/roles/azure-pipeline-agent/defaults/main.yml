@@ -1,0 +1,24 @@
+---
+# This is the API URL to get the latest release
+vsts_github_api: "https://api.github.com/repos/Microsoft/vsts-agent/releases/latest"
+
+# If vsts_agent_fullurl is set this specific version will be downloaded instead of latest
+# https://vstsagentpackage.azureedge.net/agent/2.129.0/vsts-agent-linux-x64-2.129.0.tar.gz
+vsts_agent_version: "2.140.0"
+vsts_agent_baseurl: "https://vstsagentpackage.azureedge.net/agent"
+vsts_agent_file: "vsts-agent-linux-x64-{{vsts_agent_version}}.tar.gz"
+vsts_agent_fullurl: "{{vsts_agent_baseurl}}/{{vsts_agent_version}}/{{vsts_agent_file}}"
+#vsts_agent_user: "deploy"
+
+vsts_accountname: "ENTERYOURACCOUNTNAME"
+vsts_poolname: "ENTERYOURPOOLNAME"
+
+vsts_server_url: "https://{{vsts_accountname}}.visualstudio.com/"
+vsts_agent_name: "{{ansible_hostname}}"
+vsts_agentfolder: "/home/{{vsts_agent_user}}/agent/"
+vsts_workfolder: "/home/{{vsts_agent_user}}/work/"
+
+vsts_remove: false
+
+runsvc_regex_fileline:
+  - { regex: '^source /opt/rh/rh-git29/enable', line: 'source /opt/rh/rh-git29/enable'}

@@ -1,0 +1,2 @@
+[servers]
+/*your vm host*/
